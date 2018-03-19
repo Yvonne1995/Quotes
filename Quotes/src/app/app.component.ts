@@ -1,12 +1,23 @@
 import { Component } from '@angular/core';
+import{ Quotecls } from './quote1/quote1.model';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  addArticle(quote: HTMLInputElement): boolean{
-    console.log(`Adding quote: ${quote.value}`);return false;
-  }
+  quotes: Quotecls[];
+
+  constructor(){
+  this.quotes = [
+    new Quotecls('my two cents', 0),
+    new Quotecls('this too shall pass', 0),
+    new Quotecls('if no one sees you, are you there at all',0)
+  ];
+  // addArticle(quote: HTMLInputElement): boolean{
+  //   console.log(`Adding quote: ${quote.value}`);return false;
+  // }
+}
 }

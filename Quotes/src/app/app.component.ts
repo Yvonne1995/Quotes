@@ -16,8 +16,15 @@ export class AppComponent {
     new Quotecls('this too shall pass', 0),
     new Quotecls('if no one sees you, are you there at all',0)
   ];
-  // addArticle(quote: HTMLInputElement): boolean{
-  //   console.log(`Adding quote: ${quote.value}`);return false;
+
+  // sortedArticles(): Article[]{
+  //   return this.articles.sort((a: Article, b: Article) => b.votes - a.votes);
   // }
+
+  addQuotecls(quote: HTMLInputElement): boolean{
+    console.log(`Adding Quotens quote: ${quote.value}`);this.quotes.push(new Quotecls(quote.value, 0));
+    quote.value = '';
+    return false;
+  }
 }
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
+import { Quotecls } from './quote1.model'
 
 @Component({
   selector: 'app-quote1',
@@ -8,19 +9,23 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 
 export class Quote1Component implements OnInit {
 @HostBinding('attr.class') cssClass = 'row';
-votes: number;
-quote: string;
+Quotens: Quotecls;
+// votes: number;
+// quote: string;
 
 constructor() {
-this.quote = 'my two cents';
-this.votes = 0;
+  this.Quotens = new Quotecls('my two cents', 0);
+// this.quote = 'my two cents';
+// this.votes = 0;
 }
-voteUp() {
-this.votes += 1;
+
+voteUp(): boolean {
+this.Quotens.votes += 1;
 return false;
 }
+
 voteDown() {
-this.votes -= 1;
+this.Quotens.votes -= 1;
 return false;
 }
 

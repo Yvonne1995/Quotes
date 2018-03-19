@@ -4,11 +4,11 @@
 
   <div class="field">
     <label for="quote">Quote:</label>
-    <input name="quote" #newquote>
+    <input name="quote" id="quote" #newquote>
   </div>
 
-<button (click)="addArticle(newquote)" class="ui positive right floated button">submit quote</button>
+<button (click)="addQuote(newquote)" class="ui positive right floated button btn-primary">submit quote</button>
 </form>
 
-<app-quote1 *ngFor="let foobar of quotes" ></app-quote1>
+<app-quote1 *ngFor="let foobar of quotes" [quote]="quote" ></app-quote1>
 </div>

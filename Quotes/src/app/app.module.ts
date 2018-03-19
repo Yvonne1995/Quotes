@@ -3,14 +3,18 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { QuoteComponent } from './quote/quote.component';
+import { Quote1Component } from './quote1/quote1.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    QuoteComponent,
+    Quote1Component
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,35 @@
+  <div class="container">
+<div class="row">
+  <div class="col-md-12">
+    <div class="col-md-2">
+      <div class="jumbotron">
+      <div class="ui statistic">
+        <div class="value">
+          {{votes}}
+        </div>
+        <div class="label">
+          Points
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-10">
+      <a href="{{ quote }}">
+      {{ quote }}
+      </a>
+      <ul style="list-style-type:none">
+        <li class="item">
+          <a href (click)="voteUp()">
+            &uarr; upvote
+          </a>
+        </li>
+        <li class="item">
+        <a href (click)="voteDown()">
+          &darr; downvote
+        </a>
+        </li>
+      </ul>
+      </div>
+  </div>
+</div>
+  </div>
